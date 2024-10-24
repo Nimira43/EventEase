@@ -1,0 +1,106 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Angular
+/dist/
+/coverage/
+/.aot/
+/.out-tsc/
+/.vscode/
+/.sass-cache/
+/.angular/
+
+# Angular cache
+.angular/cache
+
+# Angular Generated files
+*.js
+*.js.map
+*.ts
+!*.d.ts
+*.d.ts.map
+*.json
+*.tsbuildinfo
+
+# Compiled output
+/bin/
+/obj/
+/out/
+/artifacts/
+
+/.vscode/
+/.idea/
+/.vs/
+/.vscode-test/
+
+# User-specific files
+*.user
+*.rsuser
+*.userosscache
+*.suo
+*.ncrunchsolution
+*.dotCover
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+*.dotnetproj
+*.netproj
+project.nuget.cache
+packages/
+*.snupkg
+*.nuget.props
+*.nuget.targets
+
+# C# Project files
+*.csproj
+*.csproj.user
+*.csproj.ospsx
+*.csproj.sln
+*.csproj.suo
+*.csproj.sln.docstates
+*.csproj.vspscc
+*.csproj.vssscc
+
+# Configuration
+web.config
+packages.config
+bundleconfig.json
+nuget.config
+
+# Backup and Local History
+*.bak
+*.backup
+*.swp
+*.tmp
+*.log
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Hidden Folders
+.*;
