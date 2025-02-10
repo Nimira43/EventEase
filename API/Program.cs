@@ -24,9 +24,10 @@ try
   await context.Database.MigrateAsync();
   await DbInitializer.SeedData(context);
 }
-catch (System.Exception)
+catch (Exception ex)
 {
-  throw;
+  var logger = services.GetRequiredService<ILogger<Program>>();
+  logger.LogError(ex, "An error occurred during migration.");
 }
 
 app.Run();
