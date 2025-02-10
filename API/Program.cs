@@ -15,4 +15,6 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 app.MapControllers();
 
+using var scope = app.Services.CreateScope();
+
 app.Run();
