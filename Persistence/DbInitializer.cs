@@ -122,5 +122,6 @@ public class DbInitializer
         Longitude = -0.781404
       }
     };
+    context.Activities.AddRange(activities);
   }
 }
