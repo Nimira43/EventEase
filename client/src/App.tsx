@@ -10,7 +10,12 @@ const App = () => {
 
   return (
     <div>
-      <h1 className='logo'>EventEase</h1>      
+      <h1 className='logo'>EventEase</h1>  
+      <ul>
+        {activities.map((activity) => (
+          <li key={activity.id}>{activity.title}</li>
+        ))}
+      </ul>
     </div>
   )
 }
