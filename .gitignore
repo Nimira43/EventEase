@@ -486,3 +486,5 @@ $RECYCLE.BIN/
 
 API/appsettings.json
 API/eventease.db
+API/eventease.db-shm
+API/eventease.db-wal
