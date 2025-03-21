@@ -3,12 +3,10 @@ using Application.Activities.Queries;
 using Domain;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Persistence;
 
 namespace API.Controllers;
 
-public class ActivitiesController(AppDbContext context, IMediator mediator) : BaseApiController
+public class ActivitiesController(IMediator mediator) : BaseApiController
 {
   [HttpGet]
   public async Task<ActionResult<List<Activity>>> GetActivities()
