@@ -6,17 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
-public class ActivitiesController(IMediator mediator) : BaseApiController
+public class ActivitiesController : BaseApiController
 {
   [HttpGet]
   public async Task<ActionResult<List<Activity>>> GetActivities()
   {
-    return await mediator.Send(new GetActivityList.Query());
+    return await Mediator.Send(new GetActivityList.Query());
   }
 
   [HttpGet("{id}")]
   public async Task<ActionResult<Activity>> GetActivityDetail(string id)
   {
-    return await mediator.Send(new GetActivityDetails.Query { Id = id });
+    return await Mediator.Send(new GetActivityDetails.Query { Id = id });
   }
 }
