@@ -14,9 +14,12 @@ public class CreateActivity
 
   public class Handler(AppDbContext context) : IRequestHandler<Command, string>
   {
-    public Task<string> Handle(Command request, CancellationToken cancellationToken)
+    public async Task<string> Handle(Command request, CancellationToken cancellationToken)
     {
-      throw new NotImplementedException();
+      context.Activities.Add(request.Activity);
+      await context.SaveChangesAsync(cancellationToken);
+
+      return request.Activity.Id;
     }
   }
 }
