@@ -19,6 +19,9 @@ public class EditActivity
       var activity = await context.Activities
         .FindAsync([request.Activity.Id], cancellationToken)
           ?? throw new Exception("Cannot find activity.");
+
+      activity.Title = request.Activity.Title;
+      await context.SaveChangesAsync(cancellationToken);
     }
   }
 }
