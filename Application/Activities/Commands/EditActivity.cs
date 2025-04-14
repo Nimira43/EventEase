@@ -1,4 +1,5 @@
 using System;
+using Domain;
 using MediatR;
 using Persistence;
 
@@ -13,9 +14,11 @@ public class EditActivity
 
   public class Handler(AppDbContext context) : IRequestHandler<Command>
   {
-    public Task Handle(Command request, CancellationToken cancellationToken)
+    public async Task Handle(Command request, CancellationToken cancellationToken)
     {
-      throw new NotImplementedException();
+      var activity = await context.Activities
+        .FindAsync([request.Activity.Id], cancellationToken)
+          ?? throw new Exception("Cannot find activity.");
     }
   }
 }
