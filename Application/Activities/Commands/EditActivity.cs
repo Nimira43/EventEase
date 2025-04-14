@@ -22,6 +22,7 @@ public class EditActivity
 
       activity.Title = request.Activity.Title;
       await context.SaveChangesAsync(cancellationToken);
+
     }
   }
 }
