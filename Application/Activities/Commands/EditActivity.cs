@@ -21,7 +21,8 @@ public class EditActivity
         .FindAsync([request.Activity.Id], cancellationToken)
           ?? throw new Exception("Cannot find activity.");
 
-      activity.Title = request.Activity.Title;
+      mapper.Map(request.Activity, activity);
+
       await context.SaveChangesAsync(cancellationToken);
 
     }
