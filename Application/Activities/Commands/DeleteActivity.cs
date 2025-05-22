@@ -13,7 +13,7 @@ public class DeleteActivity
 
   public class Handler(AppDbContext context) : IRequestHandler<Command>
   {
-    public Task Handle(Command request, CancellationToken cancellationToken)
+    public async Task Handle(Command request, CancellationToken cancellationToken)
     {
       throw new NotImplementedException();
     }
