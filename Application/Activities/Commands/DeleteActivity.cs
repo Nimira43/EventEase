@@ -15,7 +15,10 @@ public class DeleteActivity
   {
     public async Task Handle(Command request, CancellationToken cancellationToken)
     {
-      throw new NotImplementedException();
+      var activity = await context.Activities
+        .FindAsync([request.Id], cancellationToken)
+          ?? throw new Exception("Cannot find activity.");
+
     }
   }
 }
