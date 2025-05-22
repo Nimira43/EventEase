@@ -35,6 +35,9 @@ public class ActivitiesController : BaseApiController
   }
 
   [HttpDelete]
-  public async Task<ActionResult>
+  public async Task<ActionResult> DeleteActivity(string id)
+  {
+    
+  }
 }
 
