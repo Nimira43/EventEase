@@ -7,6 +7,6 @@ public class DeleteActivity
 {
   public class Command : IRequest
   {
-    
+    public required string Id { get; set; }
   }
 }
