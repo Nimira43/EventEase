@@ -9,4 +9,12 @@ public class DeleteActivity
   {
     public required string Id { get; set; }
   }
+
+  public class Handler : IRequestHandler<Command>
+  {
+    public Task Handle(Command request, CancellationToken cancellationToken)
+    {
+      throw new NotImplementedException();
+    }
+  }
 }
