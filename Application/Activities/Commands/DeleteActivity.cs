@@ -1,5 +1,6 @@
 using System;
 using MediatR;
+using Persistence;
 
 namespace Application.Activities.Commands;
 
@@ -10,7 +11,7 @@ public class DeleteActivity
     public required string Id { get; set; }
   }
 
-  public class Handler : IRequestHandler<Command>
+  public class Handler(AppDbContext context) : IRequestHandler<Command>
   {
     public Task Handle(Command request, CancellationToken cancellationToken)
     {
