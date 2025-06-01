@@ -16,14 +16,15 @@ public class GetActivityList
     {
       try
       {
-        for (int i = 0; i < length; i++)
+        for (int i = 0; i < 10; i++)
         {
-          
+          cancellationToken.ThrowIfCancellationRequested();
+          await Task.Delay(1000, cancellationToken);
         }
       }
       catch (System.Exception)
-      { 
-
+      {
+        throw;
       }
 
       return await context.Activities.ToListAsync(cancellationToken);
