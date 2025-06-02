@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemText } from '@mui/material'
+import { CssBaseline, List, ListItem, ListItemText } from '@mui/material'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Navbar from './Navbar'
@@ -12,6 +12,7 @@ const App = () => {
 
   return (
     <>
+      <CssBaseline />
       <Navbar />  
       <List>
         {activities.map((activity) => (
