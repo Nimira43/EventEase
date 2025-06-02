@@ -8,6 +8,8 @@ const App = () => {
   useEffect(() => {
     axios.get<Activity[]>('https://localhost:5001/api/activities')
       .then(response => setActivities(response.data))
+
+    return () => {}
   }, [])
 
   return (
