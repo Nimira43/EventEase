@@ -1,6 +1,7 @@
-import { List, ListItem, ListItemText, Typography } from '@mui/material'
+import { List, ListItem, ListItemText } from '@mui/material'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import Navbar from './Navbar'
 
 const App = () => {
   const [activities, setActivities] = useState<Activity[]>([])
@@ -11,7 +12,7 @@ const App = () => {
 
   return (
     <>
-      <Typography variant='h3'>EventEase</Typography>  
+      <Navbar />  
       <List>
         {activities.map((activity) => (
           <ListItem key={activity.id}>
