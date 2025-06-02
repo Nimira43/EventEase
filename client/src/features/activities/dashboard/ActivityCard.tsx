@@ -38,6 +38,7 @@ export default function ActivityCard({activity}: Props) {
         <Button 
           size='medium'
           variant='contained'
+          className='dark'
         >
           View
         </Button>        
