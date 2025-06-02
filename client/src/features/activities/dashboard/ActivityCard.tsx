@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography } from '@mui/material'
+import { Button, Card, CardActions, CardContent, Chip, Typography } from '@mui/material'
 
 type Props = {
   activity: Activity
@@ -31,6 +31,17 @@ export default function ActivityCard({activity}: Props) {
           {activity.city} / {activity.venue}
         </Typography>
       </CardContent>
+      <CardActions 
+        sx={{ display: 'flex', justifyContent: 'space-between', pb: 2}}
+      >
+        <Chip label={activity.category} variant='outlined' />
+        <Button 
+          size='medium'
+          variant='contained'
+        >
+          View
+        </Button>        
+      </CardActions>
     </Card>
   )
 }
