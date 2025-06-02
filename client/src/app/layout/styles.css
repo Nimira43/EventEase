@@ -6,5 +6,9 @@
 }
 
 .logo {
-  font-family: 'Bonheur Royale', serif !important;
+  font-family: 'Great Vibes', serif !important;
+}
+
+.dark {
+  background-color: #111 !important;
 }
