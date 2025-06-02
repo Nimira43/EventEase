@@ -1,5 +1,22 @@
-export default function ActivityDashboard() {
+import { Grid2, List, ListItem, ListItemText } from '@mui/material'
+
+type Props = {
+  activities: Activity[]
+}
+
+export default function ActivityDashboard(props: Props) {
   return (
-    <div>ActivityDashboard</div>
+    <Grid2 container>
+      <Grid2 
+      size={9}>
+        <List>
+          {props.activities.map((activity) => (
+            <ListItem key={activity.id}>
+              <ListItemText>{activity.title}</ListItemText>
+            </ListItem>
+          ))}
+        </List>
+      </Grid2>
+    </Grid2>
   )
 }
