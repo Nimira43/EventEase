@@ -1,3 +1,4 @@
+import { Menu } from '@mui/icons-material'
 import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '@mui/material'
 
 export default function Navbar() {
@@ -12,7 +13,7 @@ export default function Navbar() {
             aria-label='menu'
             sx={{mr: 2}}
           >
-            {/* <MenuIcon /> */}
+            <Menu />
           </IconButton>
           <Typography 
             variant='h6'
