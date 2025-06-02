@@ -1,4 +1,4 @@
-import { Container, CssBaseline, List, ListItem, ListItemText } from '@mui/material'
+import { Container, CssBaseline } from '@mui/material'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Navbar from './Navbar'
