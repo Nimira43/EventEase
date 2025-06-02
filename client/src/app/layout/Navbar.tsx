@@ -10,30 +10,15 @@ export default function Navbar() {
           backgroundColor: 'orangered'
         }}
       >
-        <Container>
-          <Toolbar>
-            <IconButton
-              size='large'
-              edge='start'
-              color='inherit'
-              aria-label='menu'
-              sx={{mr: 2}}
-            >
-              <Menu />
-            </IconButton>
-            <Typography 
-              variant='h6'
-              component='div'
-              sx={{flexGrow: 1}}
-            >
-              EventEase
-            </Typography>
-            <Button color='inherit'>Login</Button>
+        <Container maxWidth='xl'>
+          <Toolbar 
+            sx={{ 
+              display: 'flex', justifyContent: 'space-between'
+            }}
+          >
           </Toolbar>
         </Container>
-        
       </AppBar>
-
     </Box>
   )
 }
