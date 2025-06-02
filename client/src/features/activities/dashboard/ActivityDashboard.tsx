@@ -4,13 +4,12 @@ type Props = {
   activities: Activity[]
 }
 
-export default function ActivityDashboard(props: Props) {
+export default function ActivityDashboard({activities}: Props) {
   return (
     <Grid2 container>
-      <Grid2 
-      size={9}>
+      <Grid2 size={9}>
         <List>
-          {props.activities.map((activity) => (
+          {activities.map((activity) => (
             <ListItem key={activity.id}>
               <ListItemText>{activity.title}</ListItemText>
             </ListItem>
