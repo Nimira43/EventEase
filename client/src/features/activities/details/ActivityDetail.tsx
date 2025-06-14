@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Typography } from '@mui/material'
+import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 
 
 type Props = {
@@ -20,7 +20,30 @@ export default function ActivityDetail({activity}: Props) {
         >
           {activity.title}
         </Typography>
+        <Typography
+          variant='subtitle1'  
+          fontWeight='light'
+        >
+          {activity.date}
+        </Typography>
+        <Typography
+          variant='body1'  
+        >
+          {activity.description}
+        </Typography>
       </CardContent>
+      <CardActions>
+        <Button 
+          className='dark'
+        >
+          Edit
+          </Button> 
+        <Button 
+          className='dark'
+        >
+          Cancel
+          </Button> 
+      </CardActions>
     </Card>
   )
 }

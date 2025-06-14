@@ -47,7 +47,6 @@ export default function Navbar() {
             <Button
               size='large'
               variant='contained'
-              color='warning'
               className='dark'
             >
               Create Activity
