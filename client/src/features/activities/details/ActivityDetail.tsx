@@ -33,11 +33,13 @@ export default function ActivityDetail({activity}: Props) {
       </CardContent>
       <CardActions>
         <Button 
+          variant='contained'
           className='dark'
         >
           Edit
           </Button> 
         <Button 
+          variant='contained'
           className='dark'
         >
           Cancel
