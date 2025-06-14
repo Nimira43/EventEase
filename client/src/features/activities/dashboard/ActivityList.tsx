@@ -8,7 +8,7 @@ type Props = {
 export default function ActivityList({activities}: Props) {
   return (
     <Box
-      sx={{display: 'flex', flexDirection: 'column', gap: 3}}
+      sx={{display: 'flex', flexDirection: 'column', gap: 3, }}
     >
       {activities.map(activity => (
         <ActivityCard 

@@ -1,4 +1,4 @@
-import { Container, CssBaseline } from '@mui/material'
+import { Box, Container, CssBaseline } from '@mui/material'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Navbar from './Navbar'
@@ -13,7 +13,7 @@ const App = () => {
   }, [])
 
   return (
-    <>
+    <Box sx={{backgroundColor: '#eee'}}>
       <CssBaseline />
       <Navbar />  
       <Container 
@@ -22,7 +22,7 @@ const App = () => {
       >
         <ActivityDashboard activities={activities}/>
       </Container>
-    </>
+    </Box>
   )
 }
 
