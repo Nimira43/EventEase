@@ -1,6 +1,5 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 
-
 type Props = {
   activity: Activity
 }
@@ -12,7 +11,7 @@ export default function ActivityDetail({activity}: Props) {
     >
       <CardMedia
         component='img'      
-        src={`/images/categoryImages/${activity.category}`} 
+        src={`/images/categoryImages/${activity.category}.jpg`} 
       />
       <CardContent>
         <Typography
