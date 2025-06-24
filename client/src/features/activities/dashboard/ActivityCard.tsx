@@ -5,7 +5,10 @@ type Props = {
   selectActivity: (id: string) => void
 }
 
-export default function ActivityCard({activity}: Props) {
+export default function ActivityCard({
+  activity,
+  selectActivity
+}: Props) {
   return (
     <Card
       sx={{ borderRadius: 3}}
@@ -37,6 +40,7 @@ export default function ActivityCard({activity}: Props) {
       >
         <Chip label={activity.category} variant='outlined' className='chip' />
         <Button 
+          onClick={() => selectActivity(activity.id)}
           size='medium'
           variant='contained'
           className='dark'

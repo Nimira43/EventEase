@@ -2,9 +2,13 @@ import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@
 
 type Props = {
   activity: Activity
+  cancelSelectActivity: () => void
 }
 
-export default function ActivityDetail({activity}: Props) {
+export default function ActivityDetail({
+  activity,
+  cancelSelectActivity
+}: Props) {
   return (
     <Card
       sx={{borderRadius: 3}}
@@ -38,7 +42,8 @@ export default function ActivityDetail({activity}: Props) {
         >
           Edit
           </Button> 
-        <Button 
+        <Button
+          onClick={cancelSelectActivity} 
           variant='contained'
           className='dark'
         >

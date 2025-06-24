@@ -7,7 +7,8 @@ type Props = {
 }
 
 export default function ActivityList({
-  activities, selectActivity
+  activities, 
+  selectActivity
 }: Props) {
   return (
     <Box
