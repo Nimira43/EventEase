@@ -18,6 +18,10 @@ function App () {
     setSelectedActivity(activities.find(x => x.id === id))
   }
 
+  const handleCancelSelectActivity = () => {
+    setSelectedActivity(undefined)
+  }
+
   return (
     <Box sx={{backgroundColor: '#eee'}}>
       <CssBaseline />
