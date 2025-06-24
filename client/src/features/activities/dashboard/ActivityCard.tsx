@@ -2,6 +2,7 @@ import { Button, Card, CardActions, CardContent, Chip, Typography } from '@mui/m
 
 type Props = {
   activity: Activity
+  selectActivity: (id: string) => void
 }
 
 export default function ActivityCard({activity}: Props) {
