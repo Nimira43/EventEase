@@ -15,7 +15,7 @@ function App () {
   }, [])
 
   const handleSelectActivity = (id: string) => {
-
+    setSelectedActivity(activities.find(x => x.id === id))
   }
 
   return (
