@@ -4,15 +4,19 @@ import { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard'
 
-const App = () => {
+function App () {
   const [activities, setActivities] = useState<Activity[]>([])
-  const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>()
+  const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined)
 
   useEffect(() => {
     axios.get<Activity[]>('https://localhost:5001/api/activities')
       .then(response => setActivities(response.data))
     return () => {}
   }, [])
+
+  const handleSelectActivity = (id: string) => {
+
+  }
 
   return (
     <Box sx={{backgroundColor: '#eee'}}>
