@@ -12,3 +12,7 @@
 .dark {
   background-color: #555 !important;
 }
+
+.chip {
+  text-transform: uppercase;
+}

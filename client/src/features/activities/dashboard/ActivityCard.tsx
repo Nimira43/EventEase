@@ -34,7 +34,7 @@ export default function ActivityCard({activity}: Props) {
       <CardActions 
         sx={{ display: 'flex', justifyContent: 'space-between', pb: 2}}
       >
-        <Chip label={activity.category} variant='outlined' />
+        <Chip label={activity.category} variant='outlined' className='chip' />
         <Button 
           size='medium'
           variant='contained'
