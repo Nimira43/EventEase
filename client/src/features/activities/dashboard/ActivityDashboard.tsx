@@ -9,7 +9,13 @@ type Props = {
   selectedActivity?: Activity
 }
 
-export default function ActivityDashboard({activities}: Props) {
+export default function ActivityDashboard({
+  activities,
+  cancelSelectActivity,
+  selectActivity,
+  selectedActivity
+
+}: Props) {
   return (
     <Grid2 container spacing={3}>
       <Grid2 size={7}>
