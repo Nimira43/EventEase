@@ -4,6 +4,9 @@ import ActivityDetail from '../details/ActivityDetail'
 
 type Props = {
   activities: Activity[]
+  selectActivity: (id: string) => void
+  cancelSelectActivity: () => void
+  selectedActivity?: Activity
 }
 
 export default function ActivityDashboard({activities}: Props) {
