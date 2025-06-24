@@ -30,7 +30,12 @@ function App () {
         maxWidth='xl'
         sx={{ mt: 3 }}
       >
-        <ActivityDashboard activities={activities}/>
+        <ActivityDashboard 
+          activities={activities}
+          selectActivity={handleSelectActivity}
+          cancelSelectActivity={handleCancelSelectActivity}
+          selectedActivity={selectedActivity}
+        />
       </Container>
     </Box>
   )
