@@ -1,4 +1,4 @@
-import { Box, Paper, TextField, Typography } from '@mui/material'
+import { Box, Button, Paper, TextField, Typography } from '@mui/material'
 
 export default function ActivityForm() {
   return (
@@ -13,6 +13,10 @@ export default function ActivityForm() {
         <TextField label='Date' type='dateTime' />
         <TextField label='City'/>
         <TextField label='Venue'/>
+        <Box display='flex' justifyContent='end' gap={3}>
+          <Button className='dark'>Cancel</Button>
+          <Button className='orange'>Submit</Button>
+        </Box>
       </Box>
     </Paper>
   )
