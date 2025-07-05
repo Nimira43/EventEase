@@ -1,4 +1,4 @@
-import { Paper, Typography } from '@mui/material'
+import { Box, Paper, TextField, Typography } from '@mui/material'
 
 export default function ActivityForm() {
   return (
@@ -6,6 +6,13 @@ export default function ActivityForm() {
       <Typography variant='h5' gutterBottom>
         Create Activity
       </Typography>
+      <Box component='form' display='flex' flexDirection='column' gap={3}>
+        <TextField label='Title'/>
+        <TextField label='Title'/>
+        <TextField label='Title'/>
+        <TextField label='Title'/>
+        <TextField label='Title'/>
+      </Box>
     </Paper>
   )
 }
