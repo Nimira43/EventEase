@@ -9,16 +9,24 @@
   font-family: 'Great Vibes', serif !important;
 }
 
+.dark,
+.orange {
+  color: #fffcfa !important;
+  font-weight: 500 !important;
+  transition: opacity 0.5s ease-in !important; 
+}
+
 .dark {
   background-color: #444 !important;
-  color: #fffcfa !important;
-  font-weight: 500 !important; 
 }
 
 .orange {
-  background-color: #ff4500 !important;
-  color: #fffcfa !important;
-  font-weight: 500 !important; 
+  background-color: #ff4500 !important; 
+}
+
+.dark:hover,
+.orange:hover {
+  opacity: 0.85;
 }
 
 .chip {
