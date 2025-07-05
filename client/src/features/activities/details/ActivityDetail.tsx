@@ -36,12 +36,6 @@ export default function ActivityDetail({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button 
-          variant='contained'
-          className='dark'
-        >
-          Edit
-          </Button> 
         <Button
           onClick={cancelSelectActivity} 
           variant='contained'
@@ -49,6 +43,12 @@ export default function ActivityDetail({
         >
           Cancel
           </Button> 
+        <Button 
+          variant='contained'
+          className='orange'
+        >
+          Edit
+        </Button> 
       </CardActions>
     </Card>
   )
