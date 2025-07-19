@@ -8,6 +8,9 @@ type Props = {
   selectActivity: (id: string) => void
   cancelSelectActivity: () => void
   selectedActivity?: Activity
+  openForm: (id: string) => void
+  closeForm: () => void
+  editMode: boolean
 }
 
 export default function ActivityDashboard({
