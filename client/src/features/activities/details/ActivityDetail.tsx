@@ -8,7 +8,8 @@ type Props = {
 
 export default function ActivityDetail({
   activity,
-  cancelSelectActivity
+  cancelSelectActivity,
+  openForm
 }: Props) {
   return (
     <Card
@@ -45,6 +46,7 @@ export default function ActivityDetail({
           Cancel
           </Button> 
         <Button 
+          onClick={() => openForm(activity.id)}
           variant='contained'
           className='orange'
         >
