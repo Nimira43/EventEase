@@ -28,6 +28,10 @@ function App () {
     else handleCancelSelectActivity()
     setEditMode(true)
   }
+
+  const handleFormClose = () => {
+    setEditMode(false)
+  }
  
   return (
     <Box sx={{backgroundColor: '#eee'}}>
