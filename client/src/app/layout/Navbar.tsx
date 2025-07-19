@@ -52,6 +52,7 @@ export default function Navbar({openForm}: Props) {
               size='large'
               variant='contained'
               className='dark'
+              onClick={openForm}
             >
               Create Activity
             </Button> 
