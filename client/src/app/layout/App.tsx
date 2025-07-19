@@ -25,6 +25,8 @@ function App () {
 
   const handleOpenForm = (id?: string) => {
     if (id) handleSelectActivity(id)
+    else handleCancelSelectActivity()
+    setEditMode(true)
   }
  
   return (
