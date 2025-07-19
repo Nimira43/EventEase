@@ -1,5 +1,10 @@
 import { Box, Button, Paper, TextField, Typography } from '@mui/material'
 
+type Props = {
+  activity?: Activity
+  closeForm: () => void
+}
+
 export default function ActivityForm() {
   return (
     <Paper sx={{borderRadius: 3, padding: 3}}>
