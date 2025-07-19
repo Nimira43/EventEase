@@ -40,7 +40,7 @@ export default function ActivityDashboard({
           />      
         }
         {editMode &&
-          <ActivityForm />
+          <ActivityForm claseForm={closeForm} />
         }
       </Grid2>  
     </Grid2>
