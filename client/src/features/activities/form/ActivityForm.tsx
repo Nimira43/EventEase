@@ -15,7 +15,10 @@ export default function ActivityForm({
         Create Activity
       </Typography>
       <Box component='form' display='flex' flexDirection='column' gap={3}>
-        <TextField label='Title'/>
+        <TextField 
+          label='Title'
+          value={activity?.title}
+        />
         <TextField label='Description' multiline rows={3} />
         <TextField label='Category'/>
         <TextField label='Date' type='date' />
