@@ -5,7 +5,10 @@ type Props = {
   closeForm: () => void
 }
 
-export default function ActivityForm() {
+export default function ActivityForm({
+  activity,
+  closeForm
+}: Props) {
   return (
     <Paper sx={{borderRadius: 3, padding: 3}}>
       <Typography variant='h5' gutterBottom>
@@ -19,7 +22,12 @@ export default function ActivityForm() {
         <TextField label='City'/>
         <TextField label='Venue'/>
         <Box display='flex' justifyContent='end' gap={3}>
-          <Button className='dark'>Cancel</Button>
+          <Button 
+            onClick={closeForm}
+            className='dark'
+          >
+            Cancel
+          </Button>
           <Button className='orange'>Submit</Button>
         </Box>
       </Box>
