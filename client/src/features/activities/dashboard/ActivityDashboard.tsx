@@ -38,7 +38,9 @@ export default function ActivityDashboard({
             cancelSelectActivity={cancelSelectActivity}  
           />      
         }
-        <ActivityForm />
+        {editMode &&
+          <ActivityForm />
+        }
       </Grid2>  
     </Grid2>
   )
