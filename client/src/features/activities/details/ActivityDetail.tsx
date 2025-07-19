@@ -3,6 +3,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@
 type Props = {
   activity: Activity
   cancelSelectActivity: () => void
+  openForm: (id: string) => void
 }
 
 export default function ActivityDetail({
