@@ -36,7 +36,7 @@ function App () {
   return (
     <Box sx={{backgroundColor: '#eee'}}>
       <CssBaseline />
-      <Navbar />  
+      <Navbar openForm={handleOpenForm}/>  
       <Container 
         maxWidth='xl'
         sx={{ mt: 3 }}
@@ -46,6 +46,9 @@ function App () {
           selectActivity={handleSelectActivity}
           cancelSelectActivity={handleCancelSelectActivity}
           selectedActivity={selectedActivity}
+          editMode={editMode}
+          openForm={handleOpenForm}
+          closeForm={handleFormClose}
         />
       </Container>
     </Box>
