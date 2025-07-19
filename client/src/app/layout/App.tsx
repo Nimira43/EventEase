@@ -36,7 +36,7 @@ function App () {
   return (
     <Box sx={{backgroundColor: '#eee'}}>
       <CssBaseline />
-      <Navbar openForm={handleOpenForm}/>  
+      <Navbar openForm={handleOpenForm} />  
       <Container 
         maxWidth='xl'
         sx={{ mt: 3 }}

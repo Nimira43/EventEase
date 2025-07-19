@@ -41,7 +41,7 @@ export default function ActivityDashboard({
         }
         {editMode &&
           <ActivityForm 
-            claseForm={closeForm} 
+            closeForm={closeForm} 
             activity={selectedActivity}
           />
         }
