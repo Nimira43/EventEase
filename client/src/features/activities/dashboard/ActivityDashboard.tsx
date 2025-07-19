@@ -17,7 +17,10 @@ export default function ActivityDashboard({
   activities,
   cancelSelectActivity,
   selectActivity,
-  selectedActivity
+  selectedActivity,
+  openForm,
+  closeForm,
+  editMode
 
 }: Props) {
   return (
