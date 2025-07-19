@@ -23,6 +23,10 @@ function App () {
     setSelectedActivity(undefined)
   }
 
+  const handleOpenForm = (id?: string) => {
+    if (id) handleSelectActivity(id)
+  }
+ 
   return (
     <Box sx={{backgroundColor: '#eee'}}>
       <CssBaseline />
