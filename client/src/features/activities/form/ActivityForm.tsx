@@ -14,17 +14,43 @@ export default function ActivityForm({
       <Typography variant='h5' gutterBottom>
         Create Activity
       </Typography>
-      <Box component='form' display='flex' flexDirection='column' gap={3}>
+      <Box 
+        component='form' 
+        display='flex' 
+        flexDirection='column' 
+        gap={3}
+      >
         <TextField 
           label='Title'
           defaultValue={activity?.title}
         />
-        <TextField label='Description' multiline rows={3} />
-        <TextField label='Category'/>
-        <TextField label='Date' type='date' />
-        <TextField label='City'/>
-        <TextField label='Venue'/>
-        <Box display='flex' justifyContent='end' gap={3}>
+        <TextField 
+          label='Description' 
+          multiline rows={3} 
+          defaultValue={activity?.description}
+        />
+        <TextField 
+          label='Category'
+          defaultValue={activity?.category}
+        />
+        <TextField 
+          label='Date' 
+          type='date' 
+          defaultValue={activity?.title}
+        />
+        <TextField 
+          label='City'
+          defaultValue={activity?.city}
+        />
+        <TextField 
+          label='Venue'
+          defaultValue={activity?.venue}
+        />
+        <Box 
+          display='flex' 
+          justifyContent='end' 
+          gap={3}
+        >
           <Button 
             onClick={closeForm}
             className='dark'
