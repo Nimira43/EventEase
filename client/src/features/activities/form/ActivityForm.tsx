@@ -9,6 +9,11 @@ export default function ActivityForm({
   activity,
   closeForm
 }: Props) {
+  
+  const handleSubmit = (event: any) => {
+    console.log(event)
+  }
+
   return (
     <Paper sx={{borderRadius: 3, padding: 3}}>
       <Typography variant='h5' gutterBottom>
