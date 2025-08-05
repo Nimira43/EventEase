@@ -13,7 +13,15 @@ export default function ActivityForm({
   
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log(event)
+    
+    const formData = new FormData(event.currentTarget)
+
+    const data = {}
+    formData.forEach((value, key) => {
+      data[key] = value
+    })
+
+    console.log(data)
   }
 
   return (
