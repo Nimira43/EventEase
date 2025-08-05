@@ -47,19 +47,23 @@ export default function ActivityForm({
           defaultValue={activity?.description}
         />
         <TextField 
+          name='category'
           label='Category'
           defaultValue={activity?.category}
         />
         <TextField 
+          name='date' 
           label='Date' 
           type='date' 
           defaultValue={activity?.title}
         />
         <TextField 
+          name='city'
           label='City'
           defaultValue={activity?.city}
         />
         <TextField 
+          name='venue'
           label='Venue'
           defaultValue={activity?.venue}
         />
