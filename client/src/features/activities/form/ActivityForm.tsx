@@ -17,7 +17,7 @@ export default function ActivityForm({
       <Box component='form' display='flex' flexDirection='column' gap={3}>
         <TextField 
           label='Title'
-          value={activity?.title}
+          defaultValue={activity?.title}
         />
         <TextField label='Description' multiline rows={3} />
         <TextField label='Category'/>
