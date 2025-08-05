@@ -16,7 +16,7 @@ export default function ActivityForm({
     
     const formData = new FormData(event.currentTarget)
 
-    const data = {}
+    const data: {[key: string]: FormDataEntryValue} = {}
     formData.forEach((value, key) => {
       data[key] = value
     })
@@ -37,11 +37,12 @@ export default function ActivityForm({
         gap={3}
       >
         <TextField 
+          name='title'
           label='Title'
           defaultValue={activity?.title}
         />
-        <TextField 
-          label='Description' 
+        <TextField
+          name='description'  
           multiline rows={3} 
           defaultValue={activity?.description}
         />
