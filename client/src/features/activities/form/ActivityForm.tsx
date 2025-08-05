@@ -1,4 +1,5 @@
 import { Box, Button, Paper, TextField, Typography } from '@mui/material'
+import { FormEvent } from 'react'
 
 type Props = {
   activity?: Activity
@@ -10,7 +11,7 @@ export default function ActivityForm({
   closeForm
 }: Props) {
   
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event: FormEvent) => {
     console.log(event)
   }
 
@@ -21,6 +22,7 @@ export default function ActivityForm({
       </Typography>
       <Box 
         component='form' 
+        onSubmit={handleSubmit}
         display='flex' 
         flexDirection='column' 
         gap={3}
@@ -62,7 +64,12 @@ export default function ActivityForm({
           >
             Cancel
           </Button>
-          <Button className='orange'>Submit</Button>
+          <Button 
+            type='submit'
+            className='orange'
+          >
+            Submit
+          </Button>
         </Box>
       </Box>
     </Paper>
