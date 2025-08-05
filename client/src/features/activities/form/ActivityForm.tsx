@@ -11,7 +11,8 @@ export default function ActivityForm({
   closeForm
 }: Props) {
   
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
     console.log(event)
   }
 
