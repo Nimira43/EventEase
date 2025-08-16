@@ -40,6 +40,7 @@ function App () {
         : x
       ))
     } else {
+      const newActivity = {...activity, id: activities.length.toString()}
       setActivities([
         ...activities, 
         {
