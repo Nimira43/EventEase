@@ -47,6 +47,7 @@ function App () {
         }
       ])
     }
+    setEditMode(false)
   }
  
   return (
