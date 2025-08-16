@@ -4,6 +4,7 @@ import { FormEvent } from 'react'
 type Props = {
   activity?: Activity
   closeForm: () => void
+  submitForm: (activity: Activity)
 }
 
 export default function ActivityForm({
