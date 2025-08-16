@@ -43,9 +43,7 @@ function App () {
       const newActivity = {...activity, id: activities.length.toString()}
       setActivities([
         ...activities, 
-        {
-          ...activity, id: activities.length.toString()
-        }
+       newActivity
       ])
     }
     setEditMode(false)
