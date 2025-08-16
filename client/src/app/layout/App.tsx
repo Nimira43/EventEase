@@ -41,6 +41,7 @@ function App () {
       ))
     } else {
       const newActivity = {...activity, id: activities.length.toString()}
+      setSelectedActivity(newActivity)
       setActivities([
         ...activities, 
        newActivity
