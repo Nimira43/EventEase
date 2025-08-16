@@ -43,6 +43,7 @@ export default function ActivityForm({
         />
         <TextField
           name='description'  
+          label='Description'
           multiline rows={3} 
           defaultValue={activity?.description}
         />
