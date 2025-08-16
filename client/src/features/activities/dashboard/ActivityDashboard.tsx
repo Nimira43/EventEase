@@ -45,6 +45,7 @@ export default function ActivityDashboard({
           <ActivityForm 
             closeForm={closeForm} 
             activity={selectedActivity}
+            submitForm={submitForm}
           />
         }
       </Grid2>  
