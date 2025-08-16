@@ -65,6 +65,7 @@ function App () {
           editMode={editMode}
           openForm={handleOpenForm}
           closeForm={handleFormClose}
+          submitForm={handleSubmitForm}
         />
       </Container>
     </Box>
