@@ -32,6 +32,10 @@ function App () {
   const handleFormClose = () => {
     setEditMode(false)
   }
+
+  const handleSubmitForm = (activity: Activity) => {
+    
+  }
  
   return (
     <Box sx={{backgroundColor: '#eee'}}>
