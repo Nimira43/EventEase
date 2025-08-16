@@ -22,6 +22,9 @@ export default function ActivityForm({
     formData.forEach((value, key) => {
       data[key] = value
     })
+
+    if (activity) data.id = activity.id
+
     submitForm(data as unknown as Activity)
   }
 
