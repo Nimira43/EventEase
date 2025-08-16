@@ -4,12 +4,13 @@ import { FormEvent } from 'react'
 type Props = {
   activity?: Activity
   closeForm: () => void
-  submitForm: (activity: Activity)
+  submitForm: (activity: Activity) => void
 }
 
 export default function ActivityForm({
   activity,
-  closeForm
+  closeForm,
+  submitForm
 }: Props) {
   
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -21,8 +22,7 @@ export default function ActivityForm({
     formData.forEach((value, key) => {
       data[key] = value
     })
-
-    console.log(data)
+    submitForm(data as unknown as Activity)
   }
 
   return (
