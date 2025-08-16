@@ -34,7 +34,9 @@ function App () {
   }
 
   const handleSubmitForm = (activity: Activity) => {
-    
+    if (activity.id) {
+      setActivities(activities.map(x => x.id = activity.id ? activity : x))
+    }
   }
  
   return (
