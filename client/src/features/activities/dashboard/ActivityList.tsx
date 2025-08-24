@@ -3,7 +3,8 @@ import ActivityCard from './ActivityCard'
 
 type Props = {
   activities: Activity[]
-  selectActivity: (id: string) =>void
+  selectActivity: (id: string) => void
+  deleteActivity: (id: string) => void
 }
 
 export default function ActivityList({
