@@ -12,6 +12,7 @@ type Props = {
   closeForm: () => void
   editMode: boolean
   submitForm: (activity: Activity) => void
+  deleteActivity: (id: string) => void
 }
 
 export default function ActivityDashboard({
