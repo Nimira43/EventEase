@@ -48,6 +48,14 @@ export default function ActivityCard({
           >
             View
           </Button>
+          <Button 
+            onClick={() => selectActivity(activity.id)}
+            size='medium'
+            variant='contained'
+            className='dark'
+          >
+            Delete
+          </Button>
         </Box>
                 
       </CardActions>
