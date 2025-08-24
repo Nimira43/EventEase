@@ -41,7 +41,7 @@ export default function ActivityCard({
         sx={{ display: 'flex', justifyContent: 'space-between', pb: 2}}
       >
         <Chip label={activity.category} variant='outlined' className='chip' />
-        <Box>
+        <Box display='flex' gap={3}>
           <Button 
             onClick={() => selectActivity(activity.id)}
             size='medium'
