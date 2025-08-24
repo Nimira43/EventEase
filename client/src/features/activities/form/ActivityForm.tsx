@@ -12,7 +12,6 @@ export default function ActivityForm({
   closeForm,
   submitForm
 }: Props) {
-  
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     
@@ -60,7 +59,7 @@ export default function ActivityForm({
           name='date' 
           label='Date' 
           type='date' 
-          defaultValue={activity?.title}
+          defaultValue={activity?.date}
         />
         <TextField 
           name='city'

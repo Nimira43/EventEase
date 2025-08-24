@@ -50,10 +50,18 @@ function App () {
     setEditMode(false)
   }
 
+  // const handleDelete = (id: string) => {
+  //   setActivities(activities.filter(x => x.id === id))
+  // }
   const handleDelete = (id: string) => {
-    setActivities(activities.filter(x => x.id === id))
+  setActivities(activities.filter(x => x.id !== id));
+
+  if (selectedActivity?.id === id) {
+    setSelectedActivity(undefined);
+    setEditMode(false);
   }
- 
+};
+
   return (
     <Box sx={{backgroundColor: '#eee'}}>
       <CssBaseline />
