@@ -9,7 +9,8 @@ type Props = {
 
 export default function ActivityList({
   activities, 
-  selectActivity
+  selectActivity,
+  deleteActivity
 }: Props) {
   return (
     <Box
@@ -20,6 +21,7 @@ export default function ActivityList({
           key={activity.id}
           activity={activity} 
           selectActivity={selectActivity} 
+          deleteActivity={deleteActivity}
         />
       ))}
     </Box>
