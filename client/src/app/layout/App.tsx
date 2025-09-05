@@ -1,4 +1,4 @@
-import { Box, Container, CssBaseline } from '@mui/material'
+import { Box, Container, CssBaseline, Typography } from '@mui/material'
 import axios from 'axios'
 import { useState } from 'react'
 import Navbar from './Navbar'
@@ -68,17 +68,23 @@ function App () {
         maxWidth='xl'
         sx={{ mt: 3 }}
       >
-        <ActivityDashboard 
-          activities={activities}
-          selectActivity={handleSelectActivity}
-          cancelSelectActivity={handleCancelSelectActivity}
-          selectedActivity={selectedActivity}
-          editMode={editMode}
-          openForm={handleOpenForm}
-          closeForm={handleFormClose}
-          submitForm={handleSubmitForm}
-          deleteActivity={handleDelete}
-        />
+        {!activities || isPending ? (
+          <Typography>
+            Loading...
+          </Typography>
+        ) : (
+          <ActivityDashboard 
+            activities={activities}
+            selectActivity={handleSelectActivity}
+            cancelSelectActivity={handleCancelSelectActivity}
+            selectedActivity={selectedActivity}
+            editMode={editMode}
+            openForm={handleOpenForm}
+            closeForm={handleFormClose}
+            submitForm={handleSubmitForm}
+            deleteActivity={handleDelete}
+          />
+        )}
       </Container>
     </Box>
   )
