@@ -3,17 +3,16 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard'
+import { useQuery } from '@tanstack/react-query'
 
 function App () {
-  const [activities, setActivities] = useState<Activity[]>([])
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined)
   const [editMode, setEditMode] = useState(false)
 
-  useEffect(() => {
-    axios.get<Activity[]>('https://localhost:5001/api/activities')
-      .then(response => setActivities(response.data))
-    return () => {}
-  }, [])
+  const {} = useQuery ({
+    queryKey: ['activities'],
+    queryFn: async () => {}
+  })
 
   const handleSelectActivity = (id: string) => {
     setSelectedActivity(activities.find(x => x.id === id))
