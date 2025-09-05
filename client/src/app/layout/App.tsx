@@ -1,6 +1,6 @@
 import { Box, Container, CssBaseline } from '@mui/material'
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Navbar from './Navbar'
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard'
 import { useQuery } from '@tanstack/react-query'
