@@ -9,9 +9,12 @@ function App () {
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined)
   const [editMode, setEditMode] = useState(false)
 
-  const {} = useQuery ({
+  const {data: activities} = useQuery ({
     queryKey: ['activities'],
-    queryFn: async () => {}
+    queryFn: async () => {
+      const response = await axios.get<Activity[]>('https://localhost:5001/api/activities')
+      return response.data
+    }
   })
 
   const handleSelectActivity = (id: string) => {
