@@ -9,7 +9,10 @@ function App () {
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined)
   const [editMode, setEditMode] = useState(false)
 
-  const {data: activities} = useQuery ({
+  const {
+    data: activities,
+    isPending
+  } = useQuery ({
     queryKey: ['activities'],
     queryFn: async () => {
       const response = await axios.get<Activity[]>('https://localhost:5001/api/activities')
@@ -18,7 +21,7 @@ function App () {
   })
 
   const handleSelectActivity = (id: string) => {
-    setSelectedActivity(activities.find(x => x.id === id))
+    setSelectedActivity(activities!.find(x => x.id === id))
   }
 
   const handleCancelSelectActivity = () => {
@@ -36,29 +39,25 @@ function App () {
   }
 
   const handleSubmitForm = (activity: Activity) => {
-    if (activity.id) {
-      setActivities(activities.map(x => x.id === activity.id 
-        ? activity 
-        : x
-      ))
-    } else {
-      const newActivity = {...activity, id: activities.length.toString()}
-      setSelectedActivity(newActivity)
-      setActivities([
-        ...activities, 
-        newActivity
-      ])
-    }
+    // if (activity.id) {
+    //   setActivities(activities.map(x => x.id === activity.id 
+    //     ? activity 
+    //     : x
+    //   ))
+    // } else {
+    //   const newActivity = {...activity, id: activities.length.toString()}
+    //   setSelectedActivity(newActivity)
+    //   setActivities([
+    //     ...activities, 
+    //     newActivity
+    //   ])
+    // }
+    console.log(activity)
     setEditMode(false)
   }
 
   const handleDelete = (id: string) => {
-    setActivities(activities.filter(x => x.id !== id));
-
-    if (selectedActivity?.id === id) {
-      setSelectedActivity(undefined)
-      setEditMode(false)
-    }
+    console.log(id)
   }
 
   return (
