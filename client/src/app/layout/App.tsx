@@ -9,16 +9,7 @@ function App () {
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined)
   const [editMode, setEditMode] = useState(false)
 
-  const {
-    data: activities,
-    isPending
-  } = useQuery ({
-    queryKey: ['activities'],
-    queryFn: async () => {
-      const response = await axios.get<Activity[]>('https://localhost:5001/api/activities')
-      return response.data
-    }
-  })
+  
 
   const handleSelectActivity = (id: string) => {
     setSelectedActivity(activities!.find(x => x.id === id))
