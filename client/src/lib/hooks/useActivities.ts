@@ -1,3 +1,6 @@
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
+
 export const useActivities = () => {
   const { data: activities, isPending } = useQuery ({
     queryKey: ['activities'],
