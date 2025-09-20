@@ -9,8 +9,6 @@ function App () {
   const [editMode, setEditMode] = useState(false)
   const { activities, isPending} = useActivities()
 
-  
-
   const handleSelectActivity = (id: string) => {
     setSelectedActivity(activities!.find(x => x.id === id))
   }
