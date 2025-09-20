@@ -9,4 +9,9 @@ export const useActivities = () => {
       return response.data
     }
   })
+
+  return {
+    activities,
+    isPending
+  }
 }
