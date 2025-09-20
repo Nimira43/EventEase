@@ -1,5 +1,11 @@
 import axios from 'axios'
 
+const sleep = (delay: number) => {
+  return new Promise(resolve => {
+    setTimeout(resolve, delay)
+  })
+}
+
 const agent = axios.create({
   baseURL: 'https://localhost:5001/api'
 })
