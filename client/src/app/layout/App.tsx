@@ -1,13 +1,13 @@
 import { Box, Container, CssBaseline, Typography } from '@mui/material'
-import axios from 'axios'
 import { useState } from 'react'
 import Navbar from './Navbar'
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard'
-import { useQuery } from '@tanstack/react-query'
+import { useActivities } from '../../lib/hooks/useActivities'
 
 function App () {
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined)
   const [editMode, setEditMode] = useState(false)
+  const { activities, isPending} = useActivities()
 
   
 
