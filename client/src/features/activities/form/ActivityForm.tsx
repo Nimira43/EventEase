@@ -12,6 +12,7 @@ export default function ActivityForm({
   closeForm
 }: Props) {
   const {updateActivity} = useActivities()
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     
@@ -22,9 +23,10 @@ export default function ActivityForm({
       data[key] = value
     })
 
-    if (activity) data.id = activity.id
-
-    submitForm(data as unknown as Activity)
+    if (activity) {
+      data.id = activity.id
+      updateActivity.mutate(data as unknown as Activity)
+    }
   }
 
   return (
