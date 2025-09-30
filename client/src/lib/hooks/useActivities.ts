@@ -18,6 +18,7 @@ export const useActivities = () => {
 
   return {
     activities,
-    isPending
+    isPending,
+    updateActivity
   }
 }
