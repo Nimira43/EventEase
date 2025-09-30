@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 import agent from '../api/agent'
 
 export const useActivities = () => {
@@ -9,6 +9,8 @@ export const useActivities = () => {
       return response.data
     }
   })
+
+  const updateActivity = useMutation()
 
   return {
     activities,
