@@ -13,7 +13,7 @@ export default function ActivityForm({
 }: Props) {
   const {updateActivity} = useActivities()
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     
     const formData = new FormData(event.currentTarget)
@@ -25,7 +25,7 @@ export default function ActivityForm({
 
     if (activity) {
       data.id = activity.id
-      updateActivity.mutate(data as unknown as Activity)
+      await updateActivity.mutateAsync(data as unknown as Activity)
     }
   }
 
