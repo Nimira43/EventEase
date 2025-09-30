@@ -26,6 +26,7 @@ export default function ActivityForm({
     if (activity) {
       data.id = activity.id
       await updateActivity.mutateAsync(data as unknown as Activity)
+      closeForm()
     }
   }
 
