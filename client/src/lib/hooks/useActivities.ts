@@ -10,7 +10,9 @@ export const useActivities = () => {
     }
   })
 
-  const updateActivity = useMutation()
+  const updateActivity = useMutation({
+    mutationFn: async(activity: Activity) => {}
+  })
 
   return {
     activities,
