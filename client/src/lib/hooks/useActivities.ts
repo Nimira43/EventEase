@@ -11,7 +11,9 @@ export const useActivities = () => {
   })
 
   const updateActivity = useMutation({
-    mutationFn: async(activity: Activity) => {}
+    mutationFn: async(activity: Activity) => {
+      await agent.put('/activities', activity)
+    }
   })
 
   return {
