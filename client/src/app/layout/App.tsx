@@ -27,23 +27,7 @@ function App () {
     setEditMode(false)
   }
 
-  const handleSubmitForm = (activity: Activity) => {
-    // if (activity.id) {
-    //   setActivities(activities.map(x => x.id === activity.id 
-    //     ? activity 
-    //     : x
-    //   ))
-    // } else {
-    //   const newActivity = {...activity, id: activities.length.toString()}
-    //   setSelectedActivity(newActivity)
-    //   setActivities([
-    //     ...activities, 
-    //     newActivity
-    //   ])
-    // }
-    console.log(activity)
-    setEditMode(false)
-  }
+
 
   const handleDelete = (id: string) => {
     console.log(id)
