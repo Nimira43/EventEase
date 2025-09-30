@@ -1,7 +1,9 @@
-import { useMutation, useQuery } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import agent from '../api/agent'
 
 export const useActivities = () => {
+  const queryClient = useQueryClient()
+
   const { data: activities, isPending } = useQuery ({
     queryKey: ['activities'],
     queryFn: async () => {
@@ -15,7 +17,7 @@ export const useActivities = () => {
       await agent.put('/activities', activity)
     },
     onSuccess: async () => {
-      
+
     }
 
   })
