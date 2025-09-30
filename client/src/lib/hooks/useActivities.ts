@@ -17,7 +17,9 @@ export const useActivities = () => {
       await agent.put('/activities', activity)
     },
     onSuccess: async () => {
-
+      await queryClient.invalidateQueries({
+        queryKey: ['activities']
+      })
     }
 
   })
