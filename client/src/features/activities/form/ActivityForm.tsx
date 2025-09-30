@@ -1,5 +1,6 @@
 import { Box, Button, Paper, TextField, Typography } from '@mui/material'
 import { FormEvent } from 'react'
+import { useActivities } from '../../../lib/hooks/useActivities'
 
 type Props = {
   activity?: Activity
@@ -10,6 +11,7 @@ export default function ActivityForm({
   activity,
   closeForm
 }: Props) {
+  const {updateActivity} = useActivities()
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     
