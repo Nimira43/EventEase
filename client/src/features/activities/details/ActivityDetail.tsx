@@ -15,6 +15,8 @@ export default function ActivityDetail({
   const { activities } = useActivities()
   const activity = activities?.find(x => x.id === selectedActivity.id)
 
+  if (!activity) return <Typography>Loading...</Typography>
+
   return (
     <Card
       sx={{borderRadius: 3}}
