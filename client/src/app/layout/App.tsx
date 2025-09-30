@@ -27,8 +27,6 @@ function App () {
     setEditMode(false)
   }
 
-
-
   const handleDelete = (id: string) => {
     console.log(id)
   }
@@ -58,7 +56,6 @@ function App () {
             editMode={editMode}
             openForm={handleOpenForm}
             closeForm={handleFormClose}
-            submitForm={handleSubmitForm}
             deleteActivity={handleDelete}
           />
         )}

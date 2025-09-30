@@ -4,13 +4,11 @@ import { FormEvent } from 'react'
 type Props = {
   activity?: Activity
   closeForm: () => void
-  submitForm: (activity: Activity) => void
 }
 
 export default function ActivityForm({
   activity,
-  closeForm,
-  submitForm
+  closeForm
 }: Props) {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
