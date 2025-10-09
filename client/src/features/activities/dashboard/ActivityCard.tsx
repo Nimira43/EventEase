@@ -52,7 +52,8 @@ export default function ActivityCard({
             View
           </Button>
           <Button 
-            onClick={() => deleteActivity(activity.id)}
+            onClick={() => deleteActivity.mutate(activity.id)}
+            disabled={deleteActivity.isPending}
             size='medium'
             variant='contained'
             className='dark'
