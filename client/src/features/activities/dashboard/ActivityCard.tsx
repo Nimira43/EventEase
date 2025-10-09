@@ -1,4 +1,5 @@
 import { Box, Button, Card, CardActions, CardContent, Chip, Typography } from '@mui/material'
+import { useActivities } from '../../../lib/hooks/useActivities'
 
 type Props = {
   activity: Activity
@@ -9,8 +10,9 @@ export default function ActivityCard({
   activity,
   selectActivity
 }: Props) {
+  const { deleteActivity } = useActivities() 
+  
   return (
-
     <Card
       sx={{ borderRadius: 3}}
     >
