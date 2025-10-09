@@ -3,15 +3,14 @@ import { Box, Button, Card, CardActions, CardContent, Chip, Typography } from '@
 type Props = {
   activity: Activity
   selectActivity: (id: string) => void
-  deleteActivity: (id: string) => void
 }
 
 export default function ActivityCard({
   activity,
-  selectActivity,
-  deleteActivity
+  selectActivity
 }: Props) {
   return (
+
     <Card
       sx={{ borderRadius: 3}}
     >
