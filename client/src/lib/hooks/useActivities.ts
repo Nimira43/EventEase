@@ -21,6 +21,13 @@ export const useActivities = () => {
         queryKey: ['activities']
       })
     }
+    // mutationFn: async(activity: Activity) => {
+    //   const response = await agent.put('/activities', activity)
+    //   return response.data // <- make sure backend returns updated activity
+    // },
+    // onSuccess: async () => {
+    //   await queryClient.invalidateQueries({ queryKey: ['activities'] })
+    // }
   })
   
   const createActivity = useMutation({
