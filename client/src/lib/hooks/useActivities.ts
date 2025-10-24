@@ -12,6 +12,8 @@ export const useActivities = () => {
     }
   })
 
+  // REPLACE THIS WITH ...
+
   const updateActivity = useMutation({
     mutationFn: async(activity: Activity) => {
       await agent.put('/activities', activity)
@@ -21,15 +23,22 @@ export const useActivities = () => {
         queryKey: ['activities']
       })
     }
-    // mutationFn: async(activity: Activity) => {
-    //   const response = await agent.put('/activities', activity)
-    //   return response.data // <- make sure backend returns updated activity
-    // },
-    // onSuccess: async () => {
-    //   await queryClient.invalidateQueries({ queryKey: ['activities'] })
-    // }
   })
   
+  // FIX
+  // const updateActivity = useMutation({
+  //   mutationFn: async (activity: Activity) => {
+  //     const response = await agent.put<Activity>('/activities', activity)
+  //     return response.data // ✅ updated activity from backend
+  //   },
+  //   onSuccess: (updatedActivity) => {
+  //     queryClient.setQueryData<Activity[]>(['activities'], old => {
+  //       if (!old) return []
+  //       return old.map(act => act.id === updatedActivity.id ? updatedActivity : act)
+  //     })
+  //   }
+  // })
+
   const createActivity = useMutation({
     mutationFn: async(activity: Activity) => {
       await agent.post('/activities', activity)
