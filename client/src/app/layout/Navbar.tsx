@@ -48,7 +48,7 @@ export default function Navbar() {
               size='large'
               variant='contained'
               className='dark'
-              onClick={openForm}
+              onClick={() => {}}
             >
               Create Activity
             </Button> 
