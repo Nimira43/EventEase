@@ -3,8 +3,6 @@ import Navbar from './Navbar'
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard'
 
 function App () {
-  
-
   return (
     <Box sx={{
       bgcolor: '#eee',

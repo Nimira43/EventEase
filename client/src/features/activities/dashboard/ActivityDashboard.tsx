@@ -5,9 +5,7 @@ import ActivityForm from '../form/ActivityForm'
 import { useActivities } from '../../../lib/hooks/useActivities'
 
 export default function ActivityDashboard() {
-  const { activities, isPending} = useActivities()
-
-  if (!activities || isPending) return <Typography>Loading...</Typography>
+  
 
   return (
     <Grid2 container spacing={3}>

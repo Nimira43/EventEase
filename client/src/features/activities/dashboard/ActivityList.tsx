@@ -10,6 +10,11 @@ export default function ActivityList({
   activities, 
   selectActivity,
 }: Props) {
+  const { activities, isPending} = useActivities()
+
+  if (!activities || isPending) return <Typography>Loading...</Typography>
+
+
   return (
     <Box
       sx={{display: 'flex', flexDirection: 'column', gap: 3, }}
