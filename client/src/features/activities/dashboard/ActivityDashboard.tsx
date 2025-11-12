@@ -1,4 +1,4 @@
-import { Grid2 } from '@mui/material'
+import { Grid2, Typography } from '@mui/material'
 import ActivityList from './ActivityList'
 import ActivityDetail from '../details/ActivityDetail'
 import ActivityForm from '../form/ActivityForm'
@@ -6,6 +6,8 @@ import { useActivities } from '../../../lib/hooks/useActivities'
 
 export default function ActivityDashboard() {
   const { activities, isPending} = useActivities()
+
+  if (!activities || isPending) return <Typography>Loading...</Typography>
 
   return (
     <Grid2 container spacing={3}>

@@ -18,13 +18,7 @@ function App () {
         maxWidth='xl'
         sx={{ mt: 3 }}
       >
-        {!activities || isPending ? (
-          <Typography>
-            Loading...
-          </Typography>
-        ) : (
-          <ActivityDashboard />
-        )}
+        <ActivityDashboard />
       </Container>
     </Box>
   )
