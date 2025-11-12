@@ -13,7 +13,7 @@ function App () {
       }}
     >
       <CssBaseline />
-      <Navbar openForm={handleOpenForm} />  
+      <Navbar />  
       <Container 
         maxWidth='xl'
         sx={{ mt: 3 }}
