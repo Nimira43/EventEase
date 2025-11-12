@@ -1,7 +1,6 @@
-import { Box, Container, CssBaseline, Typography } from '@mui/material'
+import { Box, Container, CssBaseline} from '@mui/material'
 import Navbar from './Navbar'
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard'
-import { useActivities } from '../../lib/hooks/useActivities'
 
 function App () {
   
