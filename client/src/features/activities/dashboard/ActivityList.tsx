@@ -15,7 +15,6 @@ export default function ActivityList() {
         <ActivityCard 
           key={activity.id}
           activity={activity} 
-          selectActivity={selectActivity} 
         />
       ))}
     </Box>
