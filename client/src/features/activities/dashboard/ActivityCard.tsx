@@ -2,8 +2,7 @@ import { Box, Button, Card, CardActions, CardContent, Chip, Typography } from '@
 import { useActivities } from '../../../lib/hooks/useActivities'
 
 type Props = {
-  activity: Activity
-  
+  activity: Activity  
 }
 
 export default function ActivityCard({ activity }: Props) {
