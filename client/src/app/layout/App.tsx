@@ -4,7 +4,7 @@ import ActivityDashboard from '../../features/activities/dashboard/ActivityDashb
 import { useActivities } from '../../lib/hooks/useActivities'
 
 function App () {
-  const { activities, isPending} = useActivities()
+  
 
   return (
     <Box sx={{

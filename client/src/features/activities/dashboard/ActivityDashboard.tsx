@@ -4,6 +4,8 @@ import ActivityDetail from '../details/ActivityDetail'
 import ActivityForm from '../form/ActivityForm'
 
 export default function ActivityDashboard() {
+  const { activities, isPending} = useActivities()
+  
   return (
     <Grid2 container spacing={3}>
       <Grid2 size={7}>
