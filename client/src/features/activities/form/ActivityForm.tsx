@@ -4,6 +4,7 @@ import { useActivities } from '../../../lib/hooks/useActivities'
 
 export default function ActivityForm() {
   const {updateActivity, createActivity} = useActivities()
+  const activity = {} as Activity
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -16,7 +17,6 @@ export default function ActivityForm() {
     })
 
     if (activity) {
-      // COMMENT OUT THIS
       data.id = activity.id
       await updateActivity.mutateAsync(data as unknown as Activity)
  
@@ -77,10 +77,7 @@ export default function ActivityForm() {
           justifyContent='end' 
           gap={3}
         >
-          <Button 
-            onClick={closeForm}
-            className='dark'
-          >
+          <Button className='dark'>
             Cancel
           </Button>
           <Button 
