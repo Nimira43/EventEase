@@ -5,8 +5,6 @@ import ActivityDashboard from '../../features/activities/dashboard/ActivityDashb
 import { useActivities } from '../../lib/hooks/useActivities'
 
 function App () {
-  const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined)
-  const [editMode, setEditMode] = useState(false)
   const { activities, isPending} = useActivities()
 
   const handleSelectActivity = (id: string) => {
