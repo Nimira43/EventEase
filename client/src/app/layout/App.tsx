@@ -45,15 +45,7 @@ function App () {
             Loading...
           </Typography>
         ) : (
-          <ActivityDashboard 
-            activities={activities}
-            selectActivity={handleSelectActivity}
-            cancelSelectActivity={handleCancelSelectActivity}
-            selectedActivity={selectedActivity}
-            editMode={editMode}
-            openForm={handleOpenForm}
-            closeForm={handleFormClose}
-          />
+          <ActivityDashboard />
         )}
       </Container>
     </Box>
