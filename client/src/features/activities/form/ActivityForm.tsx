@@ -2,24 +2,8 @@ import { Box, Button, Paper, TextField, Typography } from '@mui/material'
 import { FormEvent } from 'react'
 import { useActivities } from '../../../lib/hooks/useActivities'
 
-// FIX 
-// import { useQueryClient } from '@tanstack/react-query'
-// end of fix
-
-type Props = {
-  activity?: Activity
-  closeForm: () => void
-}
-
-export default function ActivityForm({
-  activity,
-  closeForm
-}: Props) {
+export default function ActivityForm() {
   const {updateActivity, createActivity} = useActivities()
-
-  // FIX 
-  // const queryClient = useQueryClient()
-  // end of fix
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -36,16 +20,8 @@ export default function ActivityForm({
       data.id = activity.id
       await updateActivity.mutateAsync(data as unknown as Activity)
  
-      // FIX 
-      // await queryClient.invalidateQueries({ queryKey: ['activities'] })
-      // end of fix
-
-      // COMMENT OUT THIS
-      closeForm()
-
     } else {
       await createActivity.mutateAsync(data as unknown as Activity)
-      closeForm()
     }
   }
 
