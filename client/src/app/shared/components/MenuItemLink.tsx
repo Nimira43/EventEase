@@ -18,7 +18,9 @@ export default function MenuItemLink({
         textTransform: 'uppercase',
         fontWeight: 'medium',
         color: 'inherit',
-        
+        '&.active': {
+          color: 'black'
+        }
       }}
     >
       {children}
