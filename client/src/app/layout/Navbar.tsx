@@ -1,5 +1,6 @@
 import { Group } from '@mui/icons-material'
 import { AppBar, Box, Button, Container, MenuItem, Toolbar, Typography} from '@mui/material'
+import { NavLink } from 'react-router'
 
 export default function Navbar() {
   return (
@@ -9,11 +10,11 @@ export default function Navbar() {
         sx={{ backgroundColor: 'orangered'}}
       >
         <Container maxWidth='xl'>
-          <Toolbar 
-            sx={{ display: 'flex', justifyContent: 'space-between' }}
-          >
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <Box>
-              <MenuItem 
+              <MenuItem
+                component={NavLink}
+                to='/'
                 sx={{ display: 'flex', gap: 2 }}
               >
                 <Group fontSize='large' />
@@ -25,22 +26,14 @@ export default function Navbar() {
                 </Typography>
               </MenuItem>
             </Box>
-            <Box
-              sx={{ display: 'flex' }}
-            >
-              <MenuItem
-                sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}
-              >
+            <Box sx={{ display: 'flex' }}>
+              <MenuItem sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}>
                 Activities
               </MenuItem>
-              <MenuItem
-                sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}
-              >
+              <MenuItem sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}>
                 About
               </MenuItem>
-              <MenuItem
-                sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}
-              >
+              <MenuItem sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}>
                 Contact
               </MenuItem>
             </Box>
