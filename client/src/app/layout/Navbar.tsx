@@ -27,13 +27,25 @@ export default function Navbar() {
               </MenuItem>
             </Box>
             <Box sx={{ display: 'flex' }}>
-              <MenuItem sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}>
+              <MenuItem
+                component={NavLink}
+                to='/activities'
+                sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}
+              >
                 Activities
               </MenuItem>
-              <MenuItem sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}>
-                About
+              <MenuItem
+                component={NavLink}
+                to='/createActivity'
+                sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}
+              >
+                Create Activity
               </MenuItem>
-              <MenuItem sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}>
+              <MenuItem
+                component={NavLink}
+                to='/contact'
+                sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}
+              >
                 Contact
               </MenuItem>
             </Box>
