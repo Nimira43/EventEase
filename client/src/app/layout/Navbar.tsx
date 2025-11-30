@@ -1,5 +1,5 @@
 import { Group } from '@mui/icons-material'
-import { AppBar, Box, Button, Container, MenuItem, Toolbar, Typography} from '@mui/material'
+import { AppBar, Box, Container, MenuItem, Toolbar, Typography} from '@mui/material'
 import { NavLink } from 'react-router'
 
 export default function Navbar() {
@@ -7,7 +7,7 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1}}>
       <AppBar 
         position='static' 
-        sx={{ backgroundColor: 'orangered'}}
+        sx={{ backgroundColor: 'teal'}}
       >
         <Container maxWidth='xl'>
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>

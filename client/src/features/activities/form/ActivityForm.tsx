@@ -82,7 +82,7 @@ export default function ActivityForm() {
           </Button>
           <Button 
             type='submit'
-            className='orange'
+            className='teal'
             disabled={updateActivity.isPending || createActivity.isPending}
           >
             Submit
