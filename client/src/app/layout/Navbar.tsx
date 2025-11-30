@@ -1,6 +1,7 @@
 import { Group } from '@mui/icons-material'
 import { AppBar, Box, Container, MenuItem, Toolbar, Typography} from '@mui/material'
 import { NavLink } from 'react-router'
+import MenuItemLink from '../shared/components/MenuItemLink'
 
 export default function Navbar() {
   return (
@@ -27,20 +28,12 @@ export default function Navbar() {
               </MenuItem>
             </Box>
             <Box sx={{ display: 'flex' }}>
-              <MenuItem
-                component={NavLink}
-                to='/activities'
-                sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}
-              >
+              <MenuItemLink to='/activities'>
                 Activities
-              </MenuItem>
-              <MenuItem
-                component={NavLink}
-                to='/createActivity'
-                sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}
-              >
+              </MenuItemLink>
+              <MenuItemLink to='/createActivity'>
                 Create Activity
-              </MenuItem>
+              </MenuItemLink>
             </Box>
             <MenuItem>
               User Menu
