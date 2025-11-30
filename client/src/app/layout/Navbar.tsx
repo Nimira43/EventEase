@@ -41,22 +41,10 @@ export default function Navbar() {
               >
                 Create Activity
               </MenuItem>
-              <MenuItem
-                component={NavLink}
-                to='/contact'
-                sx={{ fontSize: '1.2rem', textTransform: 'uppercase', fontWeight: 'bold' }}
-              >
-                Contact
-              </MenuItem>
             </Box>
-            <Button
-              size='large'
-              variant='contained'
-              className='dark'
-              onClick={() => {}}
-            >
-              Create Activity
-            </Button> 
+            <MenuItem>
+              User Menu
+            </MenuItem> 
           </Toolbar>
         </Container>
       </AppBar>
