@@ -1,4 +1,6 @@
+import { MenuItem } from '@mui/material'
 import { ReactNode } from 'react'
+import { NavLink } from 'react-router'
 
 export default function MenuItemLink({
   children,
@@ -8,6 +10,18 @@ export default function MenuItemLink({
   to: string
 }) {
   return (
-    <div>MenuItemLink</div>
+    <MenuItem
+      component={NavLink}
+      to={to}
+      sx={{
+        fontSize: '1.2rem',
+        textTransform: 'uppercase',
+        fontWeight: 'medium',
+        color: 'inherit',
+        
+      }}
+    >
+      {children}
+    </MenuItem>
   )
 }
