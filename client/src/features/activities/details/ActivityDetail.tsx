@@ -1,6 +1,8 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
+import { Link, useNavigate } from 'react-router'
 
 export default function ActivityDetail() {
+  const navigate = useNavigate()
   const activity = {} as Activity
  
   if (!activity) return <Typography>Loading...</Typography>
@@ -33,14 +35,15 @@ export default function ActivityDetail() {
       </CardContent>
       <CardActions>
         <Button
-          onClick={cancelSelectActivity} 
+          onClick={() => navigate('/activities') } 
           variant='contained'
           className='dark'
         >
           Cancel
           </Button> 
         <Button 
-          onClick={() => openForm(activity.id)}
+          component={Link}
+          to={`/activities/${activity.id}`}
           variant='contained'
           className='orange'
         >
