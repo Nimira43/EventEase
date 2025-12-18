@@ -1,10 +1,8 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
-import { useActivities } from '../../../lib/hooks/useActivities'
 
 export default function ActivityDetail() {
-  const { activities } = useActivities()
-  const activity = activities?.find(x => x.id === selectedActivity.id)
-
+  const activity = {} as Activity
+ 
   if (!activity) return <Typography>Loading...</Typography>
 
   return (
