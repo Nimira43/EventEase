@@ -35,7 +35,7 @@ export default function ActivityDetail() {
       </CardContent>
       <CardActions>
         <Button
-          onClick={() => navigate('/activities') } 
+          onClick={() => navigate('/activities')} 
           variant='contained'
           className='dark'
         >
