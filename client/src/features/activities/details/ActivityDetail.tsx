@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import { Link, useNavigate } from 'react-router'
 
 export default function ActivityDetail() {
@@ -34,21 +34,28 @@ export default function ActivityDetail() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button
+        <Box 
+          display='flex' 
+          justifyContent='end' 
+          gap={2}
+        >
+          <Button
           onClick={() => navigate('/activities')} 
           variant='contained'
           className='dark'
-        >
-          Cancel
+          >
+            Cancel
           </Button> 
-        <Button 
-          component={Link}
-          to={`/activities/${activity.id}`}
-          variant='contained'
-          className='orange'
-        >
-          Edit
-        </Button> 
+          <Button 
+            component={Link}
+            to={`/activities/${activity.id}`}
+            variant='contained'
+            className='teal'
+          >
+            Edit
+          </Button>
+        </Box>
+         
       </CardActions>
     </Card>
   )

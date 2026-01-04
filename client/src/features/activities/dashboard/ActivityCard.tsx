@@ -10,36 +10,42 @@ export default function ActivityCard({ activity }: Props) {
   const { deleteActivity } = useActivities() 
   
   return (
-    <Card
-      sx={{ borderRadius: 3}}
-    >
+    <Card sx={{ borderRadius: 3}}>
       <CardContent>
-        <Typography 
-          variant='h5'
-        >
+        <Typography variant='h5'>
           {activity.title}
         </Typography>
         <Typography 
-          sx={{color: 'darkgrey', mb: 1}}
+          sx={{
+            color: 'darkgrey',
+            mb: 1
+          }}
         >
           {activity.date}
         </Typography>
-        <Typography 
-          variant='body2'
-        >
+        <Typography variant='body2'>
           {activity.description}
         </Typography>
-        <Typography 
-          variant='subtitle1'
-        >
+        <Typography variant='subtitle1'>
           {activity.city} / {activity.venue}
         </Typography>
       </CardContent>
       <CardActions 
-        sx={{ display: 'flex', justifyContent: 'space-between', pb: 2}}
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          pb: 2
+        }}
       >
-        <Chip label={activity.category} variant='outlined' className='chip' />
-        <Box display='flex' gap={3}>
+        <Chip
+          label={activity.category}
+          variant='outlined'
+          className='chip'
+        />
+        <Box
+          display='flex'
+          gap={2}
+        >
           <Button 
             component={Link}
             to={`/activities/${activity.id}`}
@@ -54,12 +60,11 @@ export default function ActivityCard({ activity }: Props) {
             disabled={deleteActivity.isPending}
             size='medium'
             variant='contained'
-            className='dark'
+            className='teal'
           >
             Delete
           </Button>
-        </Box>
-                
+        </Box>                
       </CardActions>
     </Card>
   )

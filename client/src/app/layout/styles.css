@@ -5,6 +5,8 @@
   font-weight: 300 !important;
 }
 
+
+
 .logo {
   font-family: 'Great Vibes', serif !important;
 }
@@ -17,7 +19,7 @@
 }
 
 .dark {
-  background-color: #444 !important;
+  background-color: #333 !important;
 }
 
 .teal {
@@ -32,4 +34,7 @@
 .chip {
   text-transform: uppercase !important;
   border-radius: 3px !important;
+}
+.MuiInputBase-root input {
+  border-color: green !important;
 }
