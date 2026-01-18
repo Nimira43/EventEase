@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import agent from '../api/agent'
 
-export const useActivities = () => {
+export const useActivities = (id?: string) => {
   const queryClient = useQueryClient()
 
   const { data: activities, isPending } = useQuery ({
@@ -12,7 +12,14 @@ export const useActivities = () => {
     }
   })
 
-  // REPLACE THIS WITH ...
+  const { data: activity, isLoading: isLoadingActivity } = useQuery({
+    queryKey: ['activities', id],
+    queryFn: async () => {
+      const response = await agent.get<Activity>(`/activities/${id}`)
+      return response.data
+    },
+    enabled: !!id
+  })
 
   const updateActivity = useMutation({
     mutationFn: async(activity: Activity) => {
@@ -25,20 +32,6 @@ export const useActivities = () => {
     }
   })
   
-  // FIX
-  // const updateActivity = useMutation({
-  //   mutationFn: async (activity: Activity) => {
-  //     const response = await agent.put<Activity>('/activities', activity)
-  //     return response.data // ✅ updated activity from backend
-  //   },
-  //   onSuccess: (updatedActivity) => {
-  //     queryClient.setQueryData<Activity[]>(['activities'], old => {
-  //       if (!old) return []
-  //       return old.map(act => act.id === updatedActivity.id ? updatedActivity : act)
-  //     })
-  //   }
-  // })
-
   const createActivity = useMutation({
     mutationFn: async(activity: Activity) => {
       await agent.post('/activities', activity)
@@ -66,6 +59,8 @@ export const useActivities = () => {
     isPending,
     updateActivity,
     createActivity,
-    deleteActivity
+    deleteActivity,
+    activity,
+    isLoadingActivity
   }
 }

@@ -46,23 +46,24 @@ export default function ActivityCard({ activity }: Props) {
           display='flex'
           gap={2}
         >
-          <Button 
-            component={Link}
-            to={`/activities/${activity.id}`}
-            size='medium'
-            variant='contained'
-            className='dark'
-          >
-            View
-          </Button>
+          
           <Button 
             onClick={() => deleteActivity.mutate(activity.id)}
             disabled={deleteActivity.isPending}
             size='medium'
             variant='contained'
-            className='teal'
+            className='dark'
           >
             Delete
+          </Button>
+          <Button 
+            component={Link}
+            to={`/activities/${activity.id}`}
+            size='medium'
+            variant='contained'
+            className='teal'
+          >
+            View
           </Button>
         </Box>                
       </CardActions>

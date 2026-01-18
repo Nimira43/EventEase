@@ -1,11 +1,14 @@
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
-import { Link, useNavigate } from 'react-router'
+import { Link, useNavigate, useParams } from 'react-router'
+import { useActivities } from '../../../lib/hooks/useActivities'
 
 export default function ActivityDetail() {
   const navigate = useNavigate()
-  const activity = {} as Activity
+  const { id } = useParams()
+  const { activity, isLoadingActivity } = useActivities(id)
  
-  if (!activity) return <Typography>Loading...</Typography>
+  if (isLoadingActivity) return <Typography>Loading...</Typography>
+  if (!activity) return <Typography>Activity not found</Typography>
 
   return (
     <Card
