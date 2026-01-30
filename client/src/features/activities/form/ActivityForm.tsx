@@ -40,7 +40,7 @@ export default function ActivityForm() {
       </Typography>
       <Box 
         component='form' 
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         display='flex' 
         flexDirection='column' 
         gap={3}
