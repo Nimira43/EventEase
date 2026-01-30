@@ -51,7 +51,7 @@ export default function ActivityDetail() {
           </Button> 
           <Button 
             component={Link}
-            to={`/activities/${activity.id}`}
+            to={`/manage/${activity.id}`}
             variant='contained'
             className='teal'
           >
