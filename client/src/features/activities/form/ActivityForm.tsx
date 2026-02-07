@@ -24,7 +24,11 @@ export default function ActivityForm() {
       await updateActivity.mutateAsync(data as unknown as Activity)
       navigate(`/activities/${activity.id}`)
     } else {
-      await createActivity.mutateAsync(data as unknown as Activity)
+      createActivity.mutate(data as unknown as Activity, {
+        onSuccess: (id) => {
+          navigate(`/activities/${id}`)
+        }
+      })
     }
   }
 

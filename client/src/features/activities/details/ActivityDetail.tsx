@@ -42,13 +42,6 @@ export default function ActivityDetail() {
           justifyContent='end' 
           gap={2}
         >
-          <Button
-          onClick={() => navigate('/activities')} 
-          variant='contained'
-          className='dark'
-          >
-            Cancel
-          </Button> 
           <Button 
             component={Link}
             to={`/manage/${activity.id}`}
@@ -57,6 +50,13 @@ export default function ActivityDetail() {
           >
             Edit
           </Button>
+          <Button
+          onClick={() => navigate('/activities')} 
+          variant='contained'
+          className='dark'
+          >
+            Cancel
+          </Button> 
         </Box>
          
       </CardActions>
