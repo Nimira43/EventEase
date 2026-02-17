@@ -40,7 +40,10 @@ export default function ActivityForm() {
         variant='h5'
         sx={{ mb: 3 }}
       >
-        Create Activity
+        {activity
+          ? 'Edit Activity'
+          : 'Create Activity'
+        }
       </Typography>
       <Box 
         component='form' 

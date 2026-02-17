@@ -1,4 +1,4 @@
-import FlareIcon from '@mui/icons-material/Flare'
+import { GiAbstract058 } from "react-icons/gi"
 import { AppBar, Box, Container, MenuItem, Toolbar, Typography} from '@mui/material'
 import { NavLink } from 'react-router'
 import MenuItemLink from '../shared/components/MenuItemLink'
@@ -6,36 +6,17 @@ import MenuItemLink from '../shared/components/MenuItemLink'
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1}}>
-      <AppBar 
-        position='static' 
-        sx={{ backgroundColor: 'teal'}}
-      >
+      <AppBar position='static' sx={{ backgroundColor: 'red'}}>
         <Container maxWidth='xl'>
-          <Toolbar sx={{
-            display: 'flex',
-            justifyContent: 'space-between'
-          }}>
+          <Toolbar sx={{display: 'flex', justifyContent: 'space-between'}}>
             <Box>
               <MenuItem
                 component={NavLink}
                 to='/'
-                sx={{
-                  display: 'flex',
-                  gap: 1,
-                  alignItems: 'center'
-                }}
+                sx={{display: 'flex', gap: 1, alignItems: 'center' }}
               >
-                <FlareIcon
-                  fontSize="large"
-                  sx={{
-                    position: 'relative',
-                    top: '-2px'
-                  }} />
-
-                <Typography
-                  variant='h4'
-                  fontWeight='bold'
-                >
+                <GiAbstract058 size={20} />
+                <Typography variant='h5'>
                   <span className='logo'>EventEase</span>
                 </Typography>
               </MenuItem>

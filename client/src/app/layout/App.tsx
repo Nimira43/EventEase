@@ -4,17 +4,10 @@ import { Outlet } from 'react-router'
 
 function App () {
   return (
-    <Box sx={{
-      bgcolor: '#eee',
-      minHeight: '100vh'
-      }}
-    >
+    <Box sx={{minHeight: '100vh'}}>
       <CssBaseline />
       <Navbar />  
-      <Container 
-        maxWidth='xl'
-        sx={{ mt: 3 }}
-      >
+      <Container maxWidth='xl' sx={{mt: 3}}>
         <Outlet />
       </Container>
     </Box>
