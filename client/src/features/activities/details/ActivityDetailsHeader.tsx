@@ -53,9 +53,9 @@ export default function ActivityDetailsHeader() {
         </Box>
         <Box sx={{ display: 'flex', gap: 2 }}>
           {isHost ? (
-            <span>
+            <>
               <Button
-                variant="contained"
+                variant='contained'
                 onClick={() => {}}
                 sx={{
                   backgroundColor: isCancelled ? '#00ff00' : '#ff0000',
@@ -68,18 +68,18 @@ export default function ActivityDetailsHeader() {
               </Button>
 
               <Button
-                variant="contained"
-                color="primary"
+                variant='contained'
+                color='primary'
                 component={Link}
                 to={`/manage/activityId`}
                 disabled={isCancelled}
               >
                 Manage Event
               </Button>
-            </span>
+            </>
           ) : (
             <Button
-              variant="contained"
+              variant='contained'
               onClick={() => {}}
               disabled={isCancelled || loading}
               sx={{
