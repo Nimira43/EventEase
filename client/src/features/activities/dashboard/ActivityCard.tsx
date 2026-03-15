@@ -65,7 +65,8 @@ export default function ActivityCard({ activity }: Props) {
           to={`/activities/${activity.id}`}
           size='medium'
           variant='contained'
-          sx={{display: 'flex', justifySelf: 'self-end', backgroundColor: 'red'}}
+          sx={{display: 'flex', justifySelf: 'self-end'}}
+          className='main'
         >
           View
         </Button>             

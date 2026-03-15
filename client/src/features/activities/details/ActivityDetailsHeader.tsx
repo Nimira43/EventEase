@@ -58,11 +58,14 @@ export default function ActivityDetailsHeader() {
                 variant='contained'
                 onClick={() => {}}
                 sx={{
-                  backgroundColor: isCancelled ? '#00ff00' : '#ff0000',
+                  backgroundColor: isCancelled ? '#fffdfa' : '#111111',
+                  border: '1px solid',
+                  borderColor: isCancelled ? '#111111' : '#fffdfa',
                   '&:hover': {
-                    backgroundColor: isCancelled ? '#00cc00' : '#cc0000'
+                    opacity: 0.8
                   }
                 }}
+                className='weighted-text hover-transition'
               >
                 {isCancelled ? 'Re-activate Activity' : 'Cancel Activity'}
               </Button>
@@ -73,6 +76,15 @@ export default function ActivityDetailsHeader() {
                 component={Link}
                 to={`/manage/activityId`}
                 disabled={isCancelled}
+                sx={{
+                  backgroundColor: '#ff4500',
+                  border: '1px solid',
+                  borderColor: '#ff4500',
+                  '&:hover': {
+                    opacity: 0.8
+                  }
+                }}
+                className='weighted-text hover-transition'
               >
                 Manage Event
               </Button>
@@ -83,7 +95,7 @@ export default function ActivityDetailsHeader() {
               onClick={() => {}}
               disabled={isCancelled || loading}
               sx={{
-                backgroundColor: isGoing ? '#0000ff' : '#00bfff',
+                backgroundColor: isGoing ? '#0000ff' : '#ff4500',
                 '&:hover': {
                   backgroundColor: isGoing ? '#0000cc' : '#0099cc'
                 }

@@ -6,7 +6,10 @@ import MenuItemLink from '../shared/components/MenuItemLink'
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1}}>
-      <AppBar position='static' sx={{ backgroundColor: 'red'}}>
+      <AppBar 
+        position='static' 
+        sx={{ backgroundColor: '#ff4500'}}
+      >
         <Container maxWidth='xl'>
           <Toolbar sx={{display: 'flex', justifyContent: 'space-between'}}>
             <Box>

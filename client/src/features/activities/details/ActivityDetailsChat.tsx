@@ -7,10 +7,11 @@ export default function ActivityDetailsChat() {
       <Box
         sx={{
           textAlign: 'center',
-          bgcolor: 'primary.main',
+          bgcolor: '#ff4500',
           color: 'white',
           padding: 2
         }}
+        className='weighted-text'
       >
         <Typography variant='h6'>Chat about this event</Typography>
       </Box>

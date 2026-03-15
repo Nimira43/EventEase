@@ -15,13 +15,12 @@ export default function MenuItemLink({
       to={to}
       sx={{
         fontSize: '1.2rem',
-        textTransform: 'uppercase',
-        fontWeight: 'medium',
         color: 'inherit',
         '&.active': {
           color: 'black'
         }
       }}
+      className='weighted-text'
     >
       {children}
     </MenuItem>

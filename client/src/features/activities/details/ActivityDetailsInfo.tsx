@@ -13,9 +13,7 @@ export default function ActivityDetailsInfo() {
         <Grid2 size={1}>
           <Info
             fontSize='large'
-            sx={{
-              color: '#ff4500'
-            }}
+            sx={{ color: '#ff4500' }}
           />
         </Grid2>
         <Grid2 size={11}>
@@ -34,10 +32,7 @@ export default function ActivityDetailsInfo() {
         <Grid2 size={1}>
           <CalendarToday
             fontSize='large'
-            sx={{
-              color:
-                '#ff4500'
-            }}
+            sx={{ color: '#ff4500' }}
           />
         </Grid2>
         <Grid2 size={11}>
