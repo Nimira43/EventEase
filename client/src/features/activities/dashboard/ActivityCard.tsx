@@ -21,11 +21,11 @@ export default function ActivityCard({ activity }: Props) {
             <Avatar sx={{height: 80, width: 80}} />
           }
           title={activity.title}
-          titleTypographyProps={{fontWeight: 'bold', fontSize: 20}}
+          sx={{fontWeight: 'bold', fontSize: 20}}
           subheader={
             <span>
               Hosted by{' '}
-              <Link to={`profiles/bob`}>Bob</Link> 
+              <Link to={`profiles/bob`} className='host-link'>Bob</Link> 
             </span>
           }
         />

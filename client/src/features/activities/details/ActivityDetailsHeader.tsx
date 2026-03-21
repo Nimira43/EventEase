@@ -8,10 +8,21 @@ export default function ActivityDetailsHeader() {
   const loading = false
 
   return (
-    <Card sx={{ position: 'relative', mb: 2, backgroundColor: 'transparent', overflow: 'hidden' }}>
+    <Card 
+      sx={{ 
+        position: 'relative', 
+        mb: 2, 
+        backgroundColor: 'transparent', 
+        overflow: 'hidden' 
+    }}>
       {isCancelled && (
         <Badge
-          sx={{ position: 'absolute', left: 40, top: 20, zIndex: 1000 }}
+          sx={{ 
+            position: 'absolute', 
+            left: 40, 
+            top: 20, 
+            zIndex: 1000 
+          }}
           color='error'
           badgeContent='Cancelled'
         />
@@ -36,7 +47,10 @@ export default function ActivityDetailsHeader() {
         boxSizing: 'border-box',
       }}>
         <Box>
-          <Typography variant='h4' sx={{ fontWeight: 'bold' }}>
+          <Typography 
+            variant='h4' 
+            sx={{ fontWeight: 'bold' 
+          }}>
             Activity Title
           </Typography>
           <Typography variant='subtitle1'>
@@ -45,13 +59,22 @@ export default function ActivityDetailsHeader() {
           <Typography variant='subtitle2'>
             <span>
               Hosted by{' '}
-              <Link to={`/profiles/username`} style={{ color: 'white', fontWeight: 'bold' }}>
+              <Link 
+                to={`/profiles/username`} 
+                style={{ 
+                  color: '#fff', 
+                  fontWeight: 'bold',
+                  textDecoration: 'none' 
+                }}>
                 Bob
               </Link>              
             </span>
           </Typography>
         </Box>
-        <Box sx={{ display: 'flex', gap: 2 }}>
+        <Box sx={{ 
+          display: 'flex', 
+          gap: 2 
+        }}>
           {isHost ? (
             <>
               <Button

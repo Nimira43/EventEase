@@ -40,6 +40,12 @@
   opacity: 0.9 !important;
 }
 
+.host-link {
+  color: var(--main);
+  text-decoration: none;
+  
+}
+
 .weighted-text {
   font-weight: 500 !important;
   text-transform: uppercase;
