@@ -1,7 +1,13 @@
 import { Card, Badge, CardMedia, Box, Typography, Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 
-export default function ActivityDetailsHeader() {
+type Props = {
+  activity: Activity
+}
+
+export default function ActivityDetailsHeader({
+  activity
+}: Props) {
   const isCancelled = false
   const isHost = true
   const isGoing = true
@@ -30,8 +36,8 @@ export default function ActivityDetailsHeader() {
       <CardMedia
         component='img'
         height='300'
-        image={`/images/categoryImages/travel.jpg`}
-        alt={'travel image'}
+        image={`/images/categoryImages/${activity.category}.jpg`}
+        alt={`${activity.category}`}
       />
       <Box sx={{
         position: 'absolute',
@@ -51,10 +57,10 @@ export default function ActivityDetailsHeader() {
             variant='h4' 
             sx={{ fontWeight: 'bold' 
           }}>
-            Activity Title
+            {activity.title}
           </Typography>
           <Typography variant='subtitle1'>
-            17 February 2026 at 13:40
+            {activity.date}
           </Typography>
           <Typography variant='subtitle2'>
             <span>

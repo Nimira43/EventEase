@@ -1,7 +1,13 @@
 import { CalendarToday, Info, Place } from '@mui/icons-material'
 import { Divider, Grid2, Paper, Typography } from '@mui/material'
 
-export default function ActivityDetailsInfo() {
+type Props = {
+  activity: Activity
+}
+
+export default function ActivityDetailsInfo({
+  activity
+}: Props) {
   return (
     <Paper sx={{ mb: 2 }}>
       <Grid2
@@ -18,7 +24,7 @@ export default function ActivityDetailsInfo() {
         </Grid2>
         <Grid2 size={11}>
           <Typography>
-            Activity Description
+            {activity.description}
           </Typography>
         </Grid2>
       </Grid2>
@@ -37,7 +43,7 @@ export default function ActivityDetailsInfo() {
         </Grid2>
         <Grid2 size={11}>
           <Typography>
-            17 February 2026 at 13:40
+            {activity.date}
           </Typography>
         </Grid2>
       </Grid2>
@@ -56,7 +62,7 @@ export default function ActivityDetailsInfo() {
         </Grid2>
         <Grid2 size={11}>
           <Typography>
-              Venue, City
+              {activity.venue}, {activity.city}
           </Typography>
         </Grid2>
       </Grid2>
