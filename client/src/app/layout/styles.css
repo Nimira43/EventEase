@@ -42,11 +42,20 @@
 
 .host-link {
   color: var(--main);
-  text-decoration: none;
-  
+  text-decoration: none; 
 }
 
 .weighted-text {
   font-weight: 500 !important;
   text-transform: uppercase;
+}
+
+.mr-8 {
+  margin-right: 8px;
+  padding-bottom: 1px;
+}
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
 }
