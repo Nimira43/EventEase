@@ -1,50 +1,74 @@
-import { Button, ButtonGroup, Typography } from '@mui/material'
+import { Box, Button, ButtonGroup, List, ListItemText, Paper, Typography } from '@mui/material'
 import { useStore } from '../../lib/hooks/useStore'
-import { Observer } from 'mobx-react-lite'
+import { observer } from 'mobx-react-lite'
 
-export default function Counter() {
-  const {counterStore} = useStore()
-  
-  return (
-    <>
-      <Observer>
-        {() => (
-          <>
-            <Typography
-              variant='h4'
-              gutterBottom
+const Counter = observer(
+  function Counter() {
+    const {counterStore} = useStore()
+    
+    return (
+      <Box
+        display='flex'
+        justifyContent='space-between'
+      >
+        <Box sx={{ width: '60%' }}>
+          <Typography
+            variant='h4'
+            gutterBottom
+          >
+            {counterStore.title}
+          </Typography>
+          <Typography variant='h6'>
+            The count is: {counterStore.count}
+          </Typography>
+          <ButtonGroup sx={{ mt: 3 }}>
+            <Button
+              onClick={() => counterStore.decrement()}
+              variant='contained'
+              color='error'
             >
-              {counterStore.title}
-            </Typography>
-            <Typography variant='h6'>
-              The count is: {counterStore.count}
-            </Typography>
-          </>
-        )}
-      </Observer>
-      <ButtonGroup sx={{ mt: 3 }}>
-        <Button
-          onClick={() => counterStore.decrement()}
-          variant='contained'
-          color='error'
+              Decrement
+            </Button>
+            <Button
+              onClick={() => counterStore.increment()}
+              variant='contained'
+              color='success'
+            >
+              Increment
+            </Button>
+            <Button
+              onClick={() => counterStore.increment(5)}
+              variant='contained'
+              color='info'
+            >
+              Add 5
+            </Button>
+          </ButtonGroup>
+        </Box>
+        <Paper
+          sx={{
+            width: '40%',
+            p: 4
+          }}
         >
-          Decrement
-        </Button>
-        <Button
-          onClick={() => counterStore.increment()}
-          variant='contained'
-          color='success'
-        >
-          Increment
-        </Button>
-        <Button
-          onClick={() => counterStore.increment(5)}
-          variant='contained'
-          color='info'
-        >
-          Add 5
-        </Button>
-      </ButtonGroup>
-    </>
-  )
-}
+          <Typography variant='h5'>
+            Counter Events: {counterStore.eventCount}
+          </Typography>
+          <List>
+            {counterStore.events
+              .map(
+                (event, index) => (
+                  <ListItemText key={index}>
+                    {event}
+                  </ListItemText>
+                )
+              )
+            }
+          </List>
+        </Paper>
+      </Box>
+    )
+  }
+)
+
+export default Counter
