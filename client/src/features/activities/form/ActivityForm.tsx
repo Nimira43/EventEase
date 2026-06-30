@@ -1,35 +1,31 @@
-import { Box, Button, Paper, TextField, Typography } from '@mui/material'
-import { FormEvent } from 'react'
+import { Box, Button, Paper, Typography } from '@mui/material'
 import { useActivities } from '../../../lib/hooks/useActivities'
-import { textFieldStyles } from '../../../utils/textFieldStyles'
-import { useNavigate, useParams } from 'react-router'
+import { useParams } from 'react-router'
+import { useForm} from 'react-hook-form'
+import { useEffect } from 'react'
+import { activitySchema, ActivitySchema } from '../../../lib/schemas/activitySchema'
+import { zodResolver } from '@hookform/resolvers/zod'
+import TextInput from '../../../app/shared/components/TextInput'
 
 export default function ActivityForm() {
+  const {
+    control,
+    reset,
+    handleSubmit
+  } = useForm<ActivitySchema>({
+    mode: 'onTouched',
+    resolver: zodResolver(activitySchema)
+  })
+
   const { id } = useParams()
   const { updateActivity, createActivity, activity, isLoadingActivity } = useActivities(id)
-  const navigate = useNavigate()
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    
-    const formData = new FormData(event.currentTarget)
+  useEffect(() => {
+    if (activity) reset(activity)
+  }, [activity, reset])
 
-    const data: {[key: string]: FormDataEntryValue} = {}
-    formData.forEach((value, key) => {
-      data[key] = value
-    })
-
-    if (activity) {
-      data.id = activity.id
-      await updateActivity.mutateAsync(data as unknown as Activity)
-      navigate(`/activities/${activity.id}`)
-    } else {
-      createActivity.mutate(data as unknown as Activity, {
-        onSuccess: (id) => {
-          navigate(`/activities/${id}`)
-        }
-      })
-    }
+  const onSubmit = (data: ActivitySchema) => {
+    console.log(data)
   }
 
   if(isLoadingActivity) return <Typography>Loading activity...</Typography>
@@ -47,66 +43,49 @@ export default function ActivityForm() {
       </Typography>
       <Box 
         component='form' 
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(onSubmit)}
         display='flex' 
         flexDirection='column' 
         gap={3}
       >
-        <TextField 
-          name='title'
+        <TextInput
           label='Title'
-          defaultValue={activity?.title}
-          sx={textFieldStyles}
+          control={control}
+          name='title'
         />
-        <TextField
-          name='description'  
+        <TextInput
           label='Description'
-          multiline rows={3} 
-          defaultValue={activity?.description}
-          sx={textFieldStyles}
+          control={control}
+          name='description'
+          multiline
+          rows={3}
         />
-        <TextField 
-          name='category'
+        <TextInput
           label='Category'
-          defaultValue={activity?.category}
-          sx={textFieldStyles}
+          control={control}
+          name='category'
         />
-        <TextField 
-          name='date' 
-          label='Date' 
-          type='date' 
-          defaultValue={activity?.date
-            ? new Date(activity.date)
-              .toISOString()
-              .split('T')[0]
-            : new Date()
-              .toISOString()
-              .split('T')[0]
-          }
-          sx={textFieldStyles}
+        <TextInput
+          label='Date'
+          control={control}
+          name='date'
         />
-        <TextField 
-          name='city'
+        <TextInput
           label='City'
-          defaultValue={activity?.city}
-          sx={textFieldStyles}
+          control={control}
+          name='city'
         />
-        <TextField 
-          name='venue'
+        <TextInput
           label='Venue'
-          defaultValue={activity?.venue}
-          sx={textFieldStyles}
+          control={control}
+          name='venue'
         />
         <Box 
           display='flex' 
           justifyContent='end' 
           gap={2}
         >
-          <Button
-            type='button'
-            className='dark'
-          
-          >
+          <Button className='dark'>
             Cancel
           </Button>
           <Button 
