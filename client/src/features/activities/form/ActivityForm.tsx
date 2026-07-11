@@ -69,6 +69,7 @@ export default function ActivityForm() {
           name='category'
         />
         <TextInput
+          type='datetime-local'
           label='Date'
           control={control}
           name='date'
