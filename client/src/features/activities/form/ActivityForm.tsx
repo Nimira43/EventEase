@@ -9,6 +9,7 @@ import TextInput from '../../../app/shared/components/TextInput'
 import SelectInput from '../../../app/shared/components/SelectInput'
 import { categoryOptions } from './categoryOptions'
 import DateTimeInput from '../../../app/shared/components/DateTimeInput'
+import LocationInput from '../../../app/shared/components/LocationInput'
 
 export default function ActivityForm() {
   const {
@@ -76,22 +77,12 @@ export default function ActivityForm() {
           name='date'
         />
 
-        {/* <TextInput
-          type='datetime-local'
-          label='Date'
+        <LocationInput
           control={control}
-          name='date'
-        /> */}
-        <TextInput
-          label='City'
-          control={control}
-          name='city'
+          label='Enter the location'
+          name='location'        
         />
-        <TextInput
-          label='Venue'
-          control={control}
-          name='venue'
-        />
+        
         <Box 
           display='flex' 
           justifyContent='end' 
